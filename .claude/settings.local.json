@@ -4,7 +4,13 @@
       "Bash(pkill:*)",
       "Bash(./mvnw spring-boot:run:*)",
       "Bash(lsof:*)",
-      "Bash(curl:*)"
+      "Bash(curl:*)",
+      "Bash(npm run build:*)",
+      "Bash(cp:*)",
+      "Bash(kill:*)",
+      "Bash(open:*)",
+      "Bash(ls:*)",
+      "Bash(grep:*)"
     ],
     "deny": []
   }
