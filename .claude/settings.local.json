@@ -10,7 +10,13 @@
       "Bash(kill:*)",
       "Bash(open:*)",
       "Bash(ls:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(mvn clean:*)",
+      "Bash(./mvnw:*)",
+      "Bash(npm start)",
+      "Bash(npx serve:*)",
+      "Bash(rm:*)",
+      "Bash(git add:*)"
     ],
     "deny": []
   }
