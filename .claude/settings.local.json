@@ -17,7 +17,8 @@
       "Bash(npx serve:*)",
       "Bash(rm:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(chmod:*)"
     ],
     "deny": []
   }
