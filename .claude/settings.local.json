@@ -16,7 +16,8 @@
       "Bash(npm start)",
       "Bash(npx serve:*)",
       "Bash(rm:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)"
     ],
     "deny": []
   }

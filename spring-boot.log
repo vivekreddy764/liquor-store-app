@@ -13,7 +13,7 @@
 [INFO] --- frontend:1.12.1:npm (npm install) @ liquor-store-app ---
 [INFO] Running 'npm install' in /Users/saivivekreddykusukuntla/IdeaProjects/liquor-store-app/src/main/frontend
 [INFO] 
-[INFO] up to date, audited 1343 packages in 1s
+[INFO] up to date, audited 1343 packages in 2s
 [INFO] 
 [INFO] 269 packages are looking for funding
 [INFO]   run `npm fund` for details
@@ -41,10 +41,6 @@
 [INFO] src/components/BourbonCatalog.js
 [INFO]   Line 771:6:  React Hook useMemo has missing dependencies: 'bourbons' and 'filterOptions.priceRange'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
 [INFO] 
-[INFO] src/components/ProductShowcase.js
-[INFO]   Line 6:10:  'isVisible' is assigned a value but never used          no-unused-vars
-[INFO]   Line 7:10:  'currentImageIndex' is assigned a value but never used  no-unused-vars
-[INFO] 
 [INFO] src/components/ScotchCatalog.js
 [INFO]   Line 699:6:  React Hook useMemo has missing dependencies: 'filterOptions.priceRange' and 'scotchWhiskies'. Either include them or remove the dependency array  react-hooks/exhaustive-deps
 [INFO] 
@@ -56,8 +52,8 @@
 [INFO] 
 [INFO] File sizes after gzip:
 [INFO] 
-[INFO]   81.73 kB  build/static/js/main.26b23369.js
-[INFO]   10.52 kB  build/static/css/main.02b6a1ad.css
+[INFO]   82.73 kB  build/static/js/main.313f6a3b.js
+[INFO]   9.47 kB   build/static/css/main.73dd49b7.css
 [INFO]   1.78 kB   build/static/js/453.8ab44547.chunk.js
 [INFO] 
 [INFO] The project was built assuming it is hosted at /.
@@ -76,7 +72,7 @@
 [INFO] 
 [INFO] --- resources:3.3.1:resources (default-resources) @ liquor-store-app ---
 [INFO] Copying 2 resources from src/main/resources to target/classes
-[INFO] Copying 74 resources from src/main/resources to target/classes
+[INFO] Copying 100 resources from src/main/resources to target/classes
 [INFO] 
 [INFO] --- compiler:3.14.0:compile (default-compile) @ liquor-store-app ---
 [INFO] Nothing to compile - all classes are up to date.
@@ -102,24 +98,24 @@
 
  :: Spring Boot ::                (v3.5.0)
 
-2025-06-11T17:53:27.331-05:00  INFO 72602 --- [liquor-store-app] [           main] c.h.s.l.LiquorStoreAppApplication        : Starting LiquorStoreAppApplication using Java 22.0.1 with PID 72602 (/Users/saivivekreddykusukuntla/IdeaProjects/liquor-store-app/target/classes started by saivivekreddykusukuntla in /Users/saivivekreddykusukuntla/IdeaProjects/liquor-store-app)
-2025-06-11T17:53:27.333-05:00  INFO 72602 --- [liquor-store-app] [           main] c.h.s.l.LiquorStoreAppApplication        : The following 1 profile is active: "local"
-2025-06-11T17:53:27.661-05:00  INFO 72602 --- [liquor-store-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-11T17:53:27.672-05:00  INFO 72602 --- [liquor-store-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
-2025-06-11T17:53:27.983-05:00  INFO 72602 --- [liquor-store-app] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-06-11T17:53:27.991-05:00  INFO 72602 --- [liquor-store-app] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-11T17:53:27.992-05:00  INFO 72602 --- [liquor-store-app] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
-2025-06-11T17:53:28.019-05:00  INFO 72602 --- [liquor-store-app] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-11T17:53:28.020-05:00  INFO 72602 --- [liquor-store-app] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 669 ms
-2025-06-11T17:53:28.130-05:00  INFO 72602 --- [liquor-store-app] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-11T17:53:28.158-05:00  INFO 72602 --- [liquor-store-app] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
-2025-06-11T17:53:28.173-05:00  INFO 72602 --- [liquor-store-app] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-11T17:53:28.294-05:00  INFO 72602 --- [liquor-store-app] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-11T17:53:28.308-05:00  INFO 72602 --- [liquor-store-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-11T17:53:28.397-05:00  INFO 72602 --- [liquor-store-app] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
-2025-06-11T17:53:28.398-05:00  INFO 72602 --- [liquor-store-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-11T17:53:28.410-05:00  WARN 72602 --- [liquor-store-app] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2025-06-11T17:53:28.418-05:00  INFO 72602 --- [liquor-store-app] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-06-11T21:40:16.984-05:00  INFO 77203 --- [liquor-store-app] [           main] c.h.s.l.LiquorStoreAppApplication        : Starting LiquorStoreAppApplication using Java 22.0.1 with PID 77203 (/Users/saivivekreddykusukuntla/IdeaProjects/liquor-store-app/target/classes started by saivivekreddykusukuntla in /Users/saivivekreddykusukuntla/IdeaProjects/liquor-store-app)
+2025-06-11T21:40:16.985-05:00  INFO 77203 --- [liquor-store-app] [           main] c.h.s.l.LiquorStoreAppApplication        : No active profile set, falling back to 1 default profile: "default"
+2025-06-11T21:40:17.310-05:00  INFO 77203 --- [liquor-store-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-11T21:40:17.320-05:00  INFO 77203 --- [liquor-store-app] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 5 ms. Found 0 JPA repository interfaces.
+2025-06-11T21:40:17.609-05:00  INFO 77203 --- [liquor-store-app] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-06-11T21:40:17.618-05:00  INFO 77203 --- [liquor-store-app] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-11T21:40:17.619-05:00  INFO 77203 --- [liquor-store-app] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-11T21:40:17.651-05:00  INFO 77203 --- [liquor-store-app] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-11T21:40:17.652-05:00  INFO 77203 --- [liquor-store-app] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 647 ms
+2025-06-11T21:40:17.735-05:00  INFO 77203 --- [liquor-store-app] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-11T21:40:17.762-05:00  INFO 77203 --- [liquor-store-app] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-11T21:40:17.778-05:00  INFO 77203 --- [liquor-store-app] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-11T21:40:17.903-05:00  INFO 77203 --- [liquor-store-app] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-11T21:40:17.917-05:00  INFO 77203 --- [liquor-store-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-11T21:40:18.012-05:00  INFO 77203 --- [liquor-store-app] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:testdb user=SA
+2025-06-11T21:40:18.013-05:00  INFO 77203 --- [liquor-store-app] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-11T21:40:18.025-05:00  WARN 77203 --- [liquor-store-app] [           main] org.hibernate.orm.deprecation            : HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-06-11T21:40:18.033-05:00  INFO 77203 --- [liquor-store-app] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 2.3.232
@@ -127,19 +123,19 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-06-11T17:53:28.569-05:00  INFO 72602 --- [liquor-store-app] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-11T17:53:28.570-05:00  INFO 72602 --- [liquor-store-app] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-11T17:53:28.597-05:00  WARN 72602 --- [liquor-store-app] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2025-06-11T17:53:28.611-05:00  INFO 72602 --- [liquor-store-app] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
-2025-06-11T17:53:28.687-05:00  INFO 72602 --- [liquor-store-app] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
-2025-06-11T17:53:28.799-05:00  INFO 72602 --- [liquor-store-app] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
-2025-06-11T17:53:28.868-05:00  INFO 72602 --- [liquor-store-app] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-06-11T17:53:28.873-05:00  INFO 72602 --- [liquor-store-app] [           main] c.h.s.l.LiquorStoreAppApplication        : Started LiquorStoreAppApplication in 1.788 seconds (process running for 1.976)
-2025-06-11T17:53:32.155-05:00  INFO 72602 --- [liquor-store-app] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-11T17:53:32.156-05:00  INFO 72602 --- [liquor-store-app] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-11T17:53:32.158-05:00  INFO 72602 --- [liquor-store-app] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2025-06-11T17:56:35.903-05:00  INFO 72602 --- [liquor-store-app] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-11T17:56:35.938-05:00  INFO 72602 --- [liquor-store-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-06-11T17:56:35.965-05:00  INFO 72602 --- [liquor-store-app] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-11T17:56:35.967-05:00  INFO 72602 --- [liquor-store-app] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-11T17:56:35.969-05:00  INFO 72602 --- [liquor-store-app] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-11T21:40:18.182-05:00  INFO 77203 --- [liquor-store-app] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-11T21:40:18.184-05:00  INFO 77203 --- [liquor-store-app] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-11T21:40:18.213-05:00  WARN 77203 --- [liquor-store-app] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-06-11T21:40:18.227-05:00  INFO 77203 --- [liquor-store-app] [           main] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page: class path resource [static/index.html]
+2025-06-11T21:40:18.310-05:00  INFO 77203 --- [liquor-store-app] [           main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-06-11T21:40:18.426-05:00  INFO 77203 --- [liquor-store-app] [           main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:testdb'
+2025-06-11T21:40:18.500-05:00  INFO 77203 --- [liquor-store-app] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-06-11T21:40:18.506-05:00  INFO 77203 --- [liquor-store-app] [           main] c.h.s.l.LiquorStoreAppApplication        : Started LiquorStoreAppApplication in 1.768 seconds (process running for 1.925)
+2025-06-11T21:40:26.087-05:00  INFO 77203 --- [liquor-store-app] [nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-11T21:40:26.087-05:00  INFO 77203 --- [liquor-store-app] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-11T21:40:26.088-05:00  INFO 77203 --- [liquor-store-app] [nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-11T21:40:05.718-05:00  INFO 76976 --- [liquor-store-app] [ionShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-11T21:40:05.739-05:00  INFO 76976 --- [liquor-store-app] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-11T21:40:05.771-05:00  INFO 76976 --- [liquor-store-app] [ionShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-11T21:40:05.776-05:00  INFO 76976 --- [liquor-store-app] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-11T21:40:05.779-05:00  INFO 76976 --- [liquor-store-app] [ionShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
