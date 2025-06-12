@@ -18,6 +18,9 @@
       "Bash(rm:*)",
       "Bash(git add:*)",
       "Bash(git commit:*)",
+      "Bash(git reset:*)",
+      "Bash(git submodule:*)"
+      "Bash(git commit:*)",
       "Bash(chmod:*)"
     ],
     "deny": []
