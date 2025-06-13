@@ -1,27 +1,19 @@
 {
   "permissions": {
     "allow": [
-      "Bash(pkill:*)",
-      "Bash(./mvnw spring-boot:run:*)",
-      "Bash(lsof:*)",
-      "Bash(curl:*)",
-      "Bash(npm run build:*)",
-      "Bash(cp:*)",
-      "Bash(kill:*)",
-      "Bash(open:*)",
-      "Bash(ls:*)",
-      "Bash(grep:*)",
+      "Bash(find:*)",
       "Bash(mvn clean:*)",
+      "Bash(./mvnw clean:*)",
+      "Bash(npm run build:*)",
+      "Bash(curl:*)",
       "Bash(./mvnw:*)",
+      "Bash(ls:*)",
+      "Bash(pkill:*)",
       "Bash(npm start)",
-      "Bash(npx serve:*)",
+      "Bash(true)",
+      "Bash(kill:*)",
       "Bash(rm:*)",
-      "Bash(git add:*)",
-      "Bash(git commit:*)",
-      "Bash(git reset:*)",
-      "Bash(git submodule:*)"
-      "Bash(git commit:*)",
-      "Bash(chmod:*)"
+      "Bash(cp:*)"
     ],
     "deny": []
   }

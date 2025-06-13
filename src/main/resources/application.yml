@@ -1,9 +1,79 @@
 spring:
   application:
     name: liquor-store-app
+  profiles:
+    active: local
+  
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/liquorstore}
+    username: ${DB_USERNAME:liquorstore_user}
+    password: ${DB_PASSWORD:secure_password_123}
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+  
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        use_sql_comments: false
+        jdbc:
+          batch_size: 25
+          order_inserts: true
+          order_updates: true
+  
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASSWORD:}
+    timeout: 2000ms
+    lettuce:
+      pool:
+        max-active: 8
+        max-idle: 8
+        min-idle: 0
+
+# JWT Configuration
+app:
+  jwt:
+    secret: ${JWT_SECRET:myVerySecureSecretKey12345678901234567890123456789012345678901234567890}
+    expiration: ${JWT_EXPIRATION:86400000} # 24 hours
+    refresh-expiration: ${JWT_REFRESH_EXPIRATION:2592000000} # 30 days
+
+# Security Headers
+security:
+  headers:
+    content-security-policy: "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:"
+
+# Logging
+logging:
+  level:
+    com.hometown.store.liquorstoreapp: INFO
+    org.springframework.security: DEBUG
+    org.hibernate.SQL: DEBUG
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/liquorstore.log
+
+---
+# Development Profile
+spring:
+  config:
+    activate:
+      on-profile: local
   datasource:
     url: jdbc:h2:mem:testdb
-    driverClassName: org.h2.Driver
+    driver-class-name: org.h2.Driver
     username: sa
     password: password
   h2:
@@ -13,11 +83,23 @@ spring:
         web-allow-others: true
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
-    hibernate:
-      ddl-auto: update
     show-sql: true
-  security:
-    user:
-      name: admin
-      password: admin
-      roles: USER
+  redis:
+    host: localhost
+    port: 6379
+
+---
+# Production Profile
+spring:
+  config:
+    activate:
+      on-profile: prod
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: validate
+logging:
+  level:
+    com.hometown.store.liquorstoreapp: WARN
+    org.springframework.security: WARN
+    org.hibernate.SQL: WARN
