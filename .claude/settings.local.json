@@ -13,7 +13,15 @@
       "Bash(true)",
       "Bash(kill:*)",
       "Bash(rm:*)",
-      "Bash(cp:*)"
+      "Bash(cp:*)",
+      "Bash(cat:*)",
+      "Bash(grep:*)",
+      "Bash(sed:*)",
+      "Bash(mvn:*)",
+      "Bash(rg:*)",
+      "Bash(npm install:*)",
+      "Bash(mkdir:*)",
+      "Bash(chmod:*)"
     ],
     "deny": []
   }
